@@ -1,0 +1,54 @@
+.list-header
+  background: lighten($grey, 15%)
+  border: 1px solid $grey
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: lighten($dark-color, 10%)
+  padding: $s-size $m-size
+
+.list-body
+  margin-bottom: $m-size
+  @media (min-width: $breakpoint) 
+    margin-bottom: $l-size
+  
+
+.list-item
+  display: flex
+  flex-direction: column
+  border: 1px solid $grey
+  border-top: none
+  color: lighten($dark-color, 7%)
+  padding: $s-size
+  text-decoration: none
+  transition: background .3s ease
+  &:hover
+    background: lighten($grey, 15%)
+  @media (min-width: $breakpoint)
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: $m-size
+
+.list-item--message
+  align-items: center
+  justify-content: center
+  color: $grey
+  padding: $m-size
+  &:hover
+    background: none
+
+.list-item__title
+  margin: 0
+  word-break: break-all
+
+.list-item__date
+  color: $grey
+  font-size: $font-middle
+
+
+.list-item__status
+  margin: $s-size 0 0 0
+  @media (min-width: $breakpoint)
+    margin: 0
+    padding-left: $s-size

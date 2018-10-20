@@ -15,12 +15,12 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.0",
-    "jest": "^23.6.0",
-    "live-server": "^1.2.0",
+    "firebase": "^5.5.4",
     "moment": "^2.22.2",
     "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
@@ -28,26 +28,27 @@
     "react-addons-shallow-compare": "^15.6.2",
     "react-dates": "^18.1.1",
     "react-dom": "^16.5.2",
-    "react-hot-loader": "^4.3.11",
     "react-modal": "^3.6.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-test-renderer": "^16.5.2",
     "react-with-direction": "^1.3.0",
     "redux": "^4.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uuid": "^3.3.2",
     "validator": "^10.8.0",
-    "webpack": "^4.20.2",
-    "webpack-dev-server": "^3.1.9",
-    "webpack-merge": "^4.1.4"
+    "webpack": "^4.20.2"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.4",
+    "react-hot-loader": "^4.3.11",
+    "react-test-renderer": "^16.5.2",
     "regenerator-runtime": "^0.12.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
   }
 }

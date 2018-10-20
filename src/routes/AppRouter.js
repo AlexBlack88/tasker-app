@@ -1,27 +1,30 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { hot } from "react-hot-loader";
-
+import createHistory from "history/createBrowserHistory";
 import TaskDashboard from "../components/TaskDashboard";
 import CreateTask from "../components/CreateTask";
 import EditTask from "../components/EditTask";
-import HelpPage from "../components/HelpPage";
+import LoginPage from "../components/LoginPage";
 import NotFoundPage from "../components/NotFoundPage";
-import Header from "../components/Header";
+
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
+
+export const history = createHistory();
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <Router history={history}>
     <div>
-      <Header />
       <Switch>
-        <Route path="/" component={TaskDashboard} exact={true} />
-        <Route path="/create" component={CreateTask} />
-        <Route path="/edit/:id" component={EditTask} />
-        <Route path="/help" component={HelpPage} />
+        <PublicRoute path="/" component={LoginPage} exact={true} />
+        <PrivateRoute path="/dashboard" component={TaskDashboard} />
+        <PrivateRoute path="/create" component={CreateTask} />
+        <PrivateRoute path="/edit/:id" component={EditTask} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
-  </BrowserRouter>
+  </Router>
 );
 
 export default hot(module)(AppRouter);
